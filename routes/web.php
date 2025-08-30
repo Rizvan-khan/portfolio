@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\CounterController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\SkillController;
 use App\Http\Controllers\Website\WebController;
+use App\Http\Controllers\Admin\AboutController;
 
 // git add .
 // git commit -m "Updated header design"
@@ -46,6 +47,13 @@ Route::get('/add-counter', function () {
 
      Route::post('/add-skills', [SkillController::class, 'store'])
     ->name('admin.skills.add-skills');
+
+     Route::get('/update-about', function () {
+        return view('admin.about.update-about');
+    })->name('admin.about.update-about');
+
+     Route::post('/update-about', [AboutController::class, 'updateAbout'])
+    ->name('admin.about.update-about');
 
 });
 

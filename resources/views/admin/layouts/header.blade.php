@@ -637,6 +637,23 @@
                     
                     </ul>
                 </li>
+
+                 <li>
+                    <a href="#">
+                        <span class="nav-link-icon">
+                            <i class="bi bi-receipt"></i>
+                        </span>
+                        <span>Manage About </span>
+                    </a>
+                    <ul>
+
+                    
+                        <li>
+                            <a href="update-about">Update About</a>
+                        </li>
+                    
+                    </ul>
+                </li>
                
             </ul>
         </div>
