@@ -5,10 +5,17 @@ use App\Http\Controllers\Admin\PersonalController;
 use App\Http\Controllers\Admin\CounterController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\SkillController;
+use App\Http\Controllers\Website\WebController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// git add .
+// git commit -m "Updated header design"
+// git push origin main
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', [WebController::class, 'allData']);
 
 Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
     Route::get('/dashboard', function () {
