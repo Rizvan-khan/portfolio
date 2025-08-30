@@ -1,13 +1,13 @@
   <!-- content-footer -->
     <footer class="content-footer">
-        <div>© 2021 Vetra - <a href="https://laborasyon.com/" target="_blank">Laborasyon</a></div>
-        <div>
+        <div>© 2025 Admin - <a href="https://laborasyon.com/" target="_blank">Dashbaord</a></div>
+        <!-- <div>
             <nav class="nav gap-4">
                 <a href="https://themeforest.net/licenses/standard" class="nav-link">Licenses</a>
                 <a href="#" class="nav-link">Change Log</a>
                 <a href="#" class="nav-link">Get Help</a>
             </nav>
-        </div>
+        </div> -->
     </footer>
     <!-- ./ content-footer -->
 
@@ -30,5 +30,4 @@
 <script src="{{ asset('admin/dist/js/app.min.js') }}"></script>
 </body>
 
-<!-- Mirrored from vetra.laborasyon.com/demos/default/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 16 Jul 2025 09:53:19 GMT -->
 </html>
