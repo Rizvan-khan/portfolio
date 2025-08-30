@@ -74,6 +74,15 @@ Route::get('/add-counter', function () {
       Route::post('/setting', [SettingController::class, 'update'])
     ->name('admin.setting.setting');
 
+
+ Route::get('/add-testimonial', function () {
+        return view('admin.testimonial.add-testimonial');
+    })->name('admin.testimonial.add-testimonial');
+
+      Route::post('/add-testimonial', [WebController::class, 'testimonial'])
+    ->name('admin.testimonial.add-testimonial');
+
+
     Route::get('/manage-query', [QueryController::class, 'Query']);
     Route::put('/conact/{id}/resolve', [QueryController::class, 'resolve'])->name('contact.resolve');
 Route::put('/conact/{id}/cancel', [QueryController::class, 'cancel'])->name('contact.cancel');

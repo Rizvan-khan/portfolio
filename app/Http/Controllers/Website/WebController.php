@@ -11,6 +11,7 @@ use App\Models\About;
 use App\Models\Service;
 use App\Models\Setting;
 use App\Models\Query;
+use App\Models\Testimonial;
 
 class WebController extends Controller
 {
@@ -22,7 +23,9 @@ class WebController extends Controller
         $about = About::find(1);
         $setting = Setting::find(1);
         $service = Service::all();
-        return view('welcome', compact('data','data5rows','personal','counter','about','service','setting'));
+        $testimonial = Testimonial::all();
+        
+        return view('welcome', compact('data','data5rows','personal','counter','about','service','setting','testimonial'));
     }
 
 
@@ -43,6 +46,28 @@ public function Query(Request $request){
             'subject' => $request->subject,
             'message' => $request->message,
             'status'  => 0, // default unread
+        ]);
+
+        // ✅ Redirect with success
+        return redirect()->back()->with('success', 'Your message has been sent successfully!');
+    }
+
+
+    public function testimonial(Request $request){
+
+     $request->validate([
+            'name'    => 'required|string|max:255',
+            'profile'   => 'required|max:255',
+            'review' => 'required|string|max:255',
+            
+        ]);
+
+ // ✅ Store data
+        Testimonial::create([
+            'name'    => $request->name,
+            'profile'   => $request->profile,
+            'review' => $request->review,
+           
         ]);
 
         // ✅ Redirect with success

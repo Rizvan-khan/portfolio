@@ -192,6 +192,10 @@
                            <li>
                             <a href="manage-query">manage Query</a>
                         </li>
+
+                        <li>
+                            <a href="add-testimonial">manage Testimonial</a>
+                        </li>
                     
                     </ul>
                 </li>
