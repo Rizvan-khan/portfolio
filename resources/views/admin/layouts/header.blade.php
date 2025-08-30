@@ -156,6 +156,45 @@
                     
                     </ul>
                 </li>
+
+
+                 <li>
+                    <a href="#">
+                        <span class="nav-link-icon">
+                            <i class="bi bi-receipt"></i>
+                        </span>
+                        <span>Manage Service </span>
+                    </a>
+                    <ul>
+
+                    
+                        <li>
+                            <a href="add-service">Add Service</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+
+                 <li>
+                    <a href="#">
+                        <span class="nav-link-icon">
+                            <i class="bi bi-receipt"></i>
+                        </span>
+                        <span>Setting</span>
+                    </a>
+                    <ul>
+
+                    
+                        <li>
+                            <a href="setting">Web setting</a>
+                        </li>
+
+                           <li>
+                            <a href="manage-query">manage Query</a>
+                        </li>
+                    
+                    </ul>
+                </li>
                
             </ul>
         </div>

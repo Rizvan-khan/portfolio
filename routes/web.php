@@ -7,6 +7,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\SkillController;
 use App\Http\Controllers\Website\WebController;
 use App\Http\Controllers\Admin\AboutController;
+use App\Http\Controllers\Admin\QueryController;
+use App\Http\Controllers\Admin\ServiceController;
+use App\Http\Controllers\Admin\SettingController;
 
 // git add .
 // git commit -m "Updated header design"
@@ -17,6 +20,8 @@ use App\Http\Controllers\Admin\AboutController;
 // });
 
 Route::get('/', [WebController::class, 'allData']);
+Route::post('/contact', [WebController::class, 'Query'])->name('contact.store');
+
 
 Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
     Route::get('/dashboard', function () {
@@ -54,6 +59,26 @@ Route::get('/add-counter', function () {
 
      Route::post('/update-about', [AboutController::class, 'updateAbout'])
     ->name('admin.about.update-about');
+
+         Route::get('/add-service', function () {
+        return view('admin.service.add-service');
+    })->name('admin.service.add-service');
+
+     Route::post('/add-service', [ServiceController::class, 'store'])
+    ->name('admin.service.add-service');
+
+    Route::get('/setting', function () {
+        return view('admin.setting.setting');
+    })->name('admin.setting.setting');
+
+      Route::post('/setting', [SettingController::class, 'update'])
+    ->name('admin.setting.setting');
+
+    Route::get('/manage-query', [QueryController::class, 'Query']);
+    Route::put('/conact/{id}/resolve', [QueryController::class, 'resolve'])->name('contact.resolve');
+Route::put('/conact/{id}/cancel', [QueryController::class, 'cancel'])->name('contact.cancel');
+
+    
 
 });
 
