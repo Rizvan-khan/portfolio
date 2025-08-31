@@ -16,8 +16,8 @@ use App\Models\Testimonial;
 class WebController extends Controller
 {
     public function allData(){
-        $data= Skill::take(4)->get();
-        $data5rows = Skill::skip(4)->take(4)->get();
+        $data= Skill::take(8)->get();
+        $data5rows = Skill::skip(8)->take(10)->get();
         $personal = personal_detail::all();
         $counter = Counter::all();
         $about = About::find(1);
