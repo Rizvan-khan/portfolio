@@ -143,7 +143,8 @@
           <div class="col-lg-3 col-md-6">
             <div class="stats-item">
               <i class="bi bi-emoji-smile"></i>
-              <span data-purecounter-start="0"   data-purecounter-suffix="+" data-purecounter-end="{{(int)$counter->client ?? 0}}" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0"  
+               data-purecounter-end="{{(int)$counter->client ?? 0}}" data-purecounter-duration="1" class="purecounter"></span>
               <p><strong>Happy Client</strong> <span></span></p>
             </div>
           </div><!-- End Stats Item -->
